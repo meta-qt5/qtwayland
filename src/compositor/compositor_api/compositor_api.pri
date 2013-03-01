@@ -12,7 +12,7 @@ SOURCES += \
 
 QT += core-private
 
-qtHaveModule(quick) {
+#qtHaveModule(quick) {
     SOURCES += \
         compositor_api/qwaylandsurfaceitem.cpp \
         compositor_api/qwaylandsurfacenode.cpp \
@@ -27,4 +27,4 @@ qtHaveModule(quick) {
 
     QT += qml quick
     QT += quick-private gui-private
-}
+#}
