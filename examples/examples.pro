@@ -9,5 +9,7 @@ contains(CONFIG, wayland-compositor) {
         SUBDIRS += qml-compositor
     }
 
-    SUBDIRS += server-buffer
+    contains(QT_CONFIG, opengles2) {
+        SUBDIRS += server-buffer
+    }
 }
