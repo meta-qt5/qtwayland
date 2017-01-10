@@ -147,3 +147,5 @@ MODULE_PLUGIN_TYPES = \
             wayland-decoration-client \
             wayland-shell-integration
 load(qt_module)
+
+LIBS += -lxkbcommon
