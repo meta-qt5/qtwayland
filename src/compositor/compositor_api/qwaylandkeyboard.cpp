@@ -334,12 +334,6 @@ void QWaylandKeyboardPrivate::createXKBState(xkb_keymap *keymap)
     xkb_state = xkb_state_new(keymap);
 }
 
-uint QWaylandKeyboardPrivate::toWaylandXkbV1Key(const uint nativeScanCode)
-{
-    const uint offset = 8;
-    Q_ASSERT(nativeScanCode >= offset);
-    return nativeScanCode - offset;
-}
 
 void QWaylandKeyboardPrivate::createXKBKeymap()
 {
@@ -368,6 +362,13 @@ void QWaylandKeyboardPrivate::createXKBKeymap()
     free((char *)rule_names.options);
 }
 #endif
+
+uint QWaylandKeyboardPrivate::toWaylandXkbV1Key(const uint nativeScanCode)
+{
+    const uint offset = 8;
+    Q_ASSERT(nativeScanCode >= offset);
+    return nativeScanCode - offset;
+}
 
 void QWaylandKeyboardPrivate::sendRepeatInfo()
 {

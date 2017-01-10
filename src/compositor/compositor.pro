@@ -34,3 +34,5 @@ MODULE_PLUGIN_TYPES = \
     wayland-hardware-layer-integration \
 
 load(qt_module)
+
+LIBS += -lxkbcommon
