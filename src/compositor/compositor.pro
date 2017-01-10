@@ -32,3 +32,5 @@ include ($$PWD/extensions/extensions.pri)
 MODULE_PLUGIN_TYPES = \
     wayland-graphics-integration-server
 load(qt_module)
+
+LIBS += -lxkbcommon
