@@ -36,7 +36,7 @@
 #include <QtWaylandClient/private/qwaylanddisplay_p.h>
 #include <QtWaylandClient/private/qwaylandintegration_p.h>
 #endif
-
+#include <array>
 using namespace MockCompositor;
 
 // wl_seat version 5 was introduced in wayland 1.10, and although that's pretty old,
